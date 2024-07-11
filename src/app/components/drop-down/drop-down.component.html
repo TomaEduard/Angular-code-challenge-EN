@@ -1,0 +1,12 @@
+<label class="block mt-4">
+	<span class="text-gray-700">{{label}}</span>
+	<select
+		[(ngModel)]="value"
+		(change)="onChange($event)"
+		[disabled]="options.length === 0"
+		class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+		name="vehicle-type"
+	>
+		<option *ngFor="let e of options" [value]="e">{{e}}</option>
+	</select>
+</label>
